@@ -1,0 +1,2 @@
+Olá mundo!
+Java é a melhor plataforma para programação.
