@@ -10,13 +10,7 @@ public class FileEBufferedReader {
 		
 		String caminho = "C:\\Projetos Java\\ws-sts\\arquivos\\auxiliar.txt";
 
-		FileReader fr = null;
-		BufferedReader br = null;
-		
-		try {
-			
-			fr = new FileReader(caminho);
-			br = new BufferedReader(fr);
+		try (BufferedReader br = new BufferedReader(new FileReader(caminho))) {
 			
 			String linha = br.readLine();
 			
@@ -26,23 +20,11 @@ public class FileEBufferedReader {
 			}
 			
 		} catch(IOException e) {
-			
+			/*
+			 * Erro C:\Projetos Java\-sts\arquivos\auxiliar.txt (O sistema não pode encontrar o caminho especificado)
+			 */
 			System.out.println("Erro " + e.getMessage());
 			
-		} finally {
-			
-			try {
-				if(br != null) {
-					br.close();
-				}
-				if(fr != null) {
-					fr.close();
-				}
-			} catch(IOException e) {
-				e.getStackTrace();
-			}
-			
-		}
-		
+		} 
 	}
 }
