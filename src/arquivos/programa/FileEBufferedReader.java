@@ -1,12 +1,14 @@
 package arquivos.programa;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileEBufferedReader {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		String caminho = "C:\\Projetos Java\\ws-sts\\arquivos\\auxiliar.txt";
 
