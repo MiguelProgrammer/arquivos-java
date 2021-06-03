@@ -1,2 +1,7 @@
-Olá mundo!
-Java é a melhor plataforma para programação.
+Miguel,32,1200.0
+Fabio,40,2563.0
+Jéssica,30,900.0
+Sarah,11,500.0
+Débora,10,100.0
+Maria,58,120.0
+Samuel,57,9520.0

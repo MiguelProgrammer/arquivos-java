@@ -1,14 +1,20 @@
 package arquivos.programa;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import arquivos.entidades.Funcionario;
 
 public class FileEBufferedReader {
 
 public static void main(String[] args) {
+	
+		
+		List<Funcionario> func = new ArrayList<>();
 		
 		String caminho = "C:\\Projetos Java\\ws-sts\\arquivos\\auxiliar.txt";
 
@@ -17,8 +23,15 @@ public static void main(String[] args) {
 			String linha = br.readLine();
 			
 			while(linha != null) {
-				System.out.println(linha);
+				String[] dadosFuncionarios = linha.split(",");
+				func.add(new Funcionario(dadosFuncionarios[0],Integer.parseInt(dadosFuncionarios[1]),Double.parseDouble(dadosFuncionarios[2])));
 				linha = br.readLine();
+			}
+			
+			Collections.sort(func);
+
+			for (Funcionario colaborador : func) {
+				System.out.println(colaborador.toString());
 			}
 			
 		} catch(IOException e) {
